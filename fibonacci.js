@@ -28,3 +28,5 @@ function fibsRec(num) {
   let sequence = [...prevSequence, newFibNum];
   return sequence;
 }
+
+console.log(fibsRec(8));
