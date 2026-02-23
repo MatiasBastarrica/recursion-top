@@ -14,3 +14,17 @@ function fibs(num) {
 }
 
 console.log(fibs(8));
+
+function fibsRec(num) {
+  if (num === 1) {
+    return [0];
+  } else if (num === 2) {
+    return [0, 1];
+  }
+  let prevSequence = fibsRec(num - 1);
+  let newFibNum =
+    prevSequence[prevSequence.length - 1] +
+    prevSequence[prevSequence.length - 2];
+  let sequence = [...prevSequence, newFibNum];
+  return sequence;
+}
